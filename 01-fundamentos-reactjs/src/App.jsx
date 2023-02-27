@@ -1,11 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { Header } from './components/Header';
+import { Post } from './Post';
+import './global.css'
 
-function App() {
-
+export function App() {
   return (
-    <h1>hello world</h1>
+    <div>
+      <Header/>
+
+      <Post 
+        author='Thayna' 
+        content='Yo soy valentona aaaaaaaaaaaaaaaaaaa'/>
+      <Post
+        author='Joao'
+        content='aroaroaor'/>
+    </div>
   )
 }
-
-export default App
