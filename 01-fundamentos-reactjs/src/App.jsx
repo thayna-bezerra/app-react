@@ -1,18 +1,27 @@
-import { Header } from './components/Header';
-import { Post } from './Post';
-import './global.css'
+import { Header } from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
+
+import { Post } from "./Post";
+
+import styles from "./App.module.css";
+import "./global.css";
 
 export function App() {
   return (
     <div>
-      <Header/>
+      <Header />
 
-      <Post 
-        author='Thayna' 
-        content='Yo soy valentona aaaaaaaaaaaaaaaaaaa'/>
-      <Post
-        author='Joao'
-        content='aroaroaor'/>
+      <div className={styles.wrapper}>
+        <Sidebar />
+
+        <main>
+          <Post
+            author="Thayna"
+            content="Este é um post muito legal."
+          />
+          <Post author="Joao" content="Este é outro post muito legal." />
+        </main>
+      </div>
     </div>
-  )
+  );
 }
