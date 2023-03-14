@@ -1,11 +1,11 @@
 import { Sidebar } from "./components/Sidebar";
 import { Header } from "./components/Header";
-import { Post } from "./components/Post";
+import { Post, PostType } from "./components/Post";
 
 import styles from "./App.module.css";
 import "./global.css";
 
-const posts = [
+const posts: PostType[] = [
   {
     id: 1,
     author: {
@@ -23,8 +23,8 @@ const posts = [
   {
     id: 1,
     author: {
-      avatarUrl: 'https://github.com/diego3g.png',
-      name: 'Diego Fernandes',
+      avatarUrl: 'https://github.com/thayna-bezerra.png',
+      name: 'Thayna Bezerra',
       role: 'Educator'
     },
     content: [
@@ -48,9 +48,7 @@ export function App() {
             return(
               <Post 
                 key={post.id}
-                author={post.author}
-                content={post.content}
-                publishAt={post.publishAt}
+                post={post}
               />
             )
           })}
